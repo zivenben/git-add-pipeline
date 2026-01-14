@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Build Docker
         run: docker build -t myapp .
 
       - name: Test container
-        run: docker run myapp 5
+        run: docker run myapp
 
       - name: Test container (fail expected)
         run: |
